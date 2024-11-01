@@ -15,7 +15,6 @@ models/seed.js
 access.log
 
 # copyright
-assets/
 LICENSE
 
 # session
