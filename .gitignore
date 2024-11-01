@@ -1,0 +1,22 @@
+
+# env
+config
+env.js
+.env
+
+# .bat
+start.bat
+
+# node_modules
+node_modules/
+
+# etc
+models/seed.js
+access.log
+
+# copyright
+assets/
+LICENSE
+
+# session
+sessions/

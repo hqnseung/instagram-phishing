@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7"
+  },
+  "name": "instagram-phishing",
+  "version": "1.0.0",
+  "description": "인스타그램 로그인 피싱 웹사이트 (교육용)",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hqnseung/instagram-phishing.git"
+  },
+  "author": "hqnseung",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hqnseung/instagram-phishing/issues"
+  },
+  "homepage": "https://github.com/hqnseung/instagram-phishing#readme"
+}
