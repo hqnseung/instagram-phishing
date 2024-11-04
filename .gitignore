@@ -1,3 +1,6 @@
+# log
+access.log
+loginLog.json
 
 # env
 config
@@ -9,10 +12,6 @@ start.bat
 
 # node_modules
 node_modules/
-
-# etc
-models/seed.js
-access.log
 
 # copyright
 LICENSE
