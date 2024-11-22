@@ -67,10 +67,6 @@ app.post('/', (req, res) => {
     });
 });
 
-// app.use((req, res, next) => {
-//   renderTemplate(res, req, "index.ejs");
-// });
-
 app.listen(3000, () => {
   console.log(`HTTP server started on port 3000`);
 });
