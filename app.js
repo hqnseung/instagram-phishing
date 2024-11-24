@@ -67,6 +67,6 @@ app.post('/', (req, res) => {
     });
 });
 
-app.listen(3000, () => {
-  console.log(`HTTP server started on port 3000`);
+app.listen(80, () => {
+  console.log(`HTTP server started on port 80`);
 });
